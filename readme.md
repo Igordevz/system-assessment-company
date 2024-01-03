@@ -39,7 +39,7 @@
   }
 ```
 
-resposta
+response
 
 ```json
 {
