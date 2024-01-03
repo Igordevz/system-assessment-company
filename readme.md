@@ -1,52 +1,60 @@
-# Performance evaluation system in results compatible with the [chart.js](https://www.chartjs.org/) lib
+Certainly! Here's an improved version of your README:
 
-### This project is effective and important to know the company's production in relation to customers, the project started with a great potential for action in local companies;
+# Performance Evaluation System with [chart.js](https://www.chartjs.org/) Integration
 
+This project serves as a valuable tool for assessing company performance in relation to customers, demonstrating significant potential for implementation in local businesses.
 
-# How to use -- Front
+## How to Use - Frontend
 
-### install socket.io and react-chartjs-2
+### Install dependencies
+
+Make sure to install the required dependencies using npm:
 
 ```bash
-  npm i react-chartjs-2
-  npm i socket.io-client
+npm i react-chartjs-2
+npm i socket.io-client
 ```
 
-### Config Socket - react/javascript
+### Configure Socket in React/JavaScript
+
+Import and configure Socket.io in your React application:
 
 ```javascript
-    import { io } from "socket.io-client";
-    
-    const socket = io("http://localhost:8080/", {
-      transports: ["websocket"],
-    });
+import { io } from "socket.io-client";
+
+const socket = io("http://localhost:8080/", {
+  transports: ["websocket"],
+});
 ```
 
-### endpoints 
+### Endpoints
 
-```bash 
-  / -- test API
-  /create -- create a database to store feedback data
-  /chart  -- take customer feedback and turn it into data
-  /get -- search for data to transform it into a chart
-```
-### Request for data storage
+- `/` - Test API
+- `/create` - Create a database to store feedback data
+- `/chart` - Convert customer feedback into data
+- `/get` - Retrieve data to transform it into a chart
 
-```json
-    {
-  	"range": 4,
-  	"pergunta": "1"
-  }
-```
+### Request for Data Storage
 
-response
+To store feedback data, send a JSON request:
 
 ```json
 {
-	"msg": "Obrigado pelo seu feedback"
+  "range": 4,
+  "pergunta": "1"
 }
 ```
 
-# [Example](https://github.com/Igordevz/Front-assessment-company) 
+Response:
 
+```json
+{
+  "msg": "Obrigado pelo seu feedback"
+}
+```
 
+## [Example](https://github.com/Igordevz/Front-assessment-company)
+
+Explore the provided example in the [GitHub repository](https://github.com/Igordevz/Front-assessment-company) to see how the system is implemented.
+
+Feel free to adjust and enhance the documentation as needed for your specific project requirements.
