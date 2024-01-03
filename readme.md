@@ -1,4 +1,4 @@
-Certainly! Here's an improved version of the README, focusing on the usage of the code snippets you provided:
+
 
 # Performance Evaluation System with [chart.js](https://www.chartjs.org/) Integration
 
