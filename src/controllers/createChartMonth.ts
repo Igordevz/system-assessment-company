@@ -18,9 +18,7 @@ export async function CreateChart(req: Request, res: Response) {
   ];
 
   const hoje = new Date();
-  const mes = meses[hoje.getMonth()];
 
-  // criar array dentro dos models, para armazenar todas as perguntas;
   const newmodel = new Model({
     company: [
       {

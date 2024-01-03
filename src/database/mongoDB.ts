@@ -9,4 +9,3 @@ export async function AuthenticationDatabase(){
         console.log(error)
     }
 }
-// key

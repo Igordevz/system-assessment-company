@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import { Model } from "../models/avaliable";
-import VerifyItems from "../utils/verifyItemDB";
 import { io } from "../server";
 
 export async function Chart(req: Request, res: Response) {
@@ -15,11 +14,12 @@ export async function Chart(req: Request, res: Response) {
   const hoje = new Date();
   const dia = hoje.getDate().toString(); 
   const mes = meses[hoje.getMonth()];
-  // pegar perguntar
+
   const item:any = await Model.findOne({"company.pergunta": pergunta})
   const getFile = item?.company.findIndex((index:any) => index.pergunta == pergunta)
 
   const formatDate = `${dia} ${mes}`
+
   if(!item){
     return res.status(401).json({msg: "pergunta não encontrada"})
   }

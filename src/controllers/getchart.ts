@@ -5,4 +5,5 @@ export async function GetChart(req: Request, res: Response) {
     const data = await Model.find();
 
     return res.json({data})
+    
 }

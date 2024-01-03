@@ -12,12 +12,13 @@ app.use(express.json());
 app.use(router);
 const serverWeb = http.createServer(app);
 export const io = new Server(serverWeb);
+
 async function BootStrap() {
   await AuthenticationDatabase();
 
   io.on("connection", (Socket) => {
-    console.log("id",Socket.id);
- });
+    console.log("id", Socket.id);
+  });
 
   // configuration door
   const door = 8080;

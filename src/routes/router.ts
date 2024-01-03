@@ -10,5 +10,7 @@ router.get("/", (req, res) => {
 })
 
 router.get("/create", CreateChart)
+
 router.post("/chart", Chart)
+
 router.get("/get",GetChart)

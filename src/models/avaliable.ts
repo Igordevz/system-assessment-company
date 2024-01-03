@@ -7,7 +7,6 @@ import { Schema, model } from "mongoose";
       pergunta: string,
    ],
    nameWork: string,
-  
  }
 
  export const NewSchema = new Schema<Iavaliable>({
