@@ -4,6 +4,8 @@ import { AuthenticationDatabase } from "./database/mongoDB";
 import cors from "cors";
 import http from "http";
 import { Server } from "socket.io";
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 app.use(cors());
